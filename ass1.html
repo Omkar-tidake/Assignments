@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 1</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--jQuery cdn-->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+	<style type="text/css">
+		.wrapper {width: 98%;margin: 0 auto;}
+		.wrapper ol li {margin-bottom: 15px;padding-bottom: 15px;border-bottom: 1px solid #ccc;}
+		.wrapper ol li:last-child {border-bottom:0px;}
+		.wrapper ol li p {margin:0px 0px 10px;}
+	</style>
+</head>
+<body>
+
+	<div class="wrapper">
+		<ol>
+			<li>
+				<p>There are two arrays with individual values, write a JavaScript program to compute the sum of each individual index value from the given arrays.<br>
+				Sample array :<br>
+				array1 = [1,0,2,3,4];<br>
+				array2 = [3,5,6,7,8,13];<br>
+				Expected Output : [4, 5, 8, 10, 12, 13]</p>
+				<a href="javasript:;" class="btn que1">Answer</a>
+			</li>
+			<li>
+				<p>Write a JavaScript program to get the width and height of the window (any time the window is resized).</p>
+				<a href="javasript:;" class="btn que2">Answer</a>
+			</li>
+			<li>
+				<p>Write a JavaScript program to display the reading status (i.e. display book name, author name and reading status) of the following books.<br>
+				var library = [<br>
+				 {<br>
+				 author: 'Bill Gates',<br>
+				 title: 'The Road Ahead',<br>
+				 readingStatus: true<br>
+				 },<br>
+				 {<br>
+				 author: 'Steve Jobs',<br>
+				 title: 'Walter Isaacson',<br>
+				 readingStatus: true<br>
+				 },<br>
+				 {<br>
+				 author: 'Suzanne Collins',<br>
+				 title: 'Mockingjay: The Final Book of The Hunger Games',<br>
+				 readingStatus: false<br>
+				 }];</p>
+				<a href="javasript:;" class="btn que3">Answer</a>
+			</li>
+			<li>
+				<p>Write a JavaScript function to split a string and convert it into an array of words.<br>
+				Test Data :	console.log(string_to_array("Robin Singh"));<br>
+				["Robin", "Singh”]</p>
+				<a href="javasript:;" class="btn que4">Answer</a>
+			</li>
+			<li>
+				<p>Write a JavaScript function that accepts a number as a parameter and check the number is prime or not.<br>
+				Note : A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself.</p>
+				<a href="javasript:;" class="btn que5">Answer</a>
+			</li>
+			<li>
+				<p>Write a JavaScript program which iterates the integers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz"</p>
+				<a href="javasript:;" class="btn que6">Answer</a>
+			</li>
+			<li>
+				<p>Write a JavaScript function that reverse a number<br>
+				Example x = 32243;<br>
+				Expected Output : 34223	</p>
+				<a href="javasript:;" class="btn que7">Answer</a>
+			</li>
+			<li>
+				<p>Write a JavaScript function that accepts a string as a parameter and find the longest word within the string.<br>
+				Example string : 'Web Development Tutorial'<br>
+				Expected Output : 'Development'</p>
+				<a href="javasript:;" class="btn que8">Answer</a>
+			</li>
+		</ol>
+	</div>
+
+	<script type="text/javascript">
+	  $(document).ready(function(){
+		
+	  	//for que 1
+		var group1 = [1,0,2,3,4]
+		var group2 = [3,5,6,7,8,13]
+
+		var sum = group1.map(function (num, idx) {
+		  return num + group2[idx];
+		}); 
+
+		$('.que1').click(function(){
+			alert(sum);
+		});
+
+
+		//for que 2
+		var w = window.innerWidth;
+		var h = window.innerHeight;
+		var wh = "Width: " + w + " Height: " + h;
+		
+		$(window).resize(function(){
+			var w = window.innerWidth;
+			var h = window.innerHeight;
+			var wh = "Width: " + w + " Height: " + h;
+			alert(wh);
+		});
+
+		$('.que2').click(function(){
+			var wh = "Width: " + w + " Height: " + h;
+			alert(wh);
+		});
+
+
+		//for que 8
+		$('.que8').click(function sliceWords(){
+		  var words = "Web Development Tutorial"; 
+		  var cutWords = words.slice(4, 16);
+		  alert(cutWords);
+		});
+
+	  });
+	</script>
+
+</body>
+</html>   
